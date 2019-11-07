@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace TodoApi.Models
+namespace EmissionApi.Models
 {
     public class TodoContext : DbContext
     {

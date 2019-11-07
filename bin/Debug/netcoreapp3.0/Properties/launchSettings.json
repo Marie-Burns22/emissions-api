@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "TodoApi": {
+    "EmissionApi": {
       "commandName": "Project",
       "launchBrowser": true,
 

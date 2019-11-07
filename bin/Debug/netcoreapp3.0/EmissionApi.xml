@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>TodoApi</name>
+        <name>EmissionApi</name>
     </assembly>
     <members>
-        <member name="M:TodoApi.Controllers.EmissionsController.PostEmission(TodoApi.Models.Emission)">
+        <member name="M:EmissionApi.Controllers.EmissionsController.PostEmission(EmissionApi.Models.Emission)">
              <summary>
              Creates a Emission.
              </summary>
@@ -23,7 +23,7 @@
              <response code="201">Returns the newly created item</response>
              <response code="400">If the item is null</response>  
         </member>
-        <member name="M:TodoApi.Controllers.EmissionsController.DeleteEmission(System.Int64)">
+        <member name="M:EmissionApi.Controllers.EmissionsController.DeleteEmission(System.Int64)">
             <summary>
             Deletes a specific Emission.
             </summary>

@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using TodoApi.Models;
+using EmissionApi.Models;
 
-namespace TodoApi.Controllers
+namespace EmissionApi.Controllers
 {
     [Produces("application/json")]
     [Route("api/[controller]")]

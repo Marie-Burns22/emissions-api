@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace TodoApi.Models
+namespace EmissionApi.Models
 {
     public class Emission
     {

@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "/Users/marieburns/Development/c_practice/TodoApi/TodoApi.csproj": {}
+    "/Users/marieburns/Development/c_practice/TodoApi/EmissionApi.csproj": {}
   },
   "projects": {
-    "/Users/marieburns/Development/c_practice/TodoApi/TodoApi.csproj": {
+    "/Users/marieburns/Development/c_practice/TodoApi/EmissionApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/marieburns/Development/c_practice/TodoApi/TodoApi.csproj",
-        "projectName": "TodoApi",
-        "projectPath": "/Users/marieburns/Development/c_practice/TodoApi/TodoApi.csproj",
+        "projectUniqueName": "/Users/marieburns/Development/c_practice/TodoApi/EmissionApi.csproj",
+        "projectName": "EmissionApi",
+        "projectPath": "/Users/marieburns/Development/c_practice/TodoApi/EmissionApi.csproj",
         "packagesPath": "/Users/marieburns/.nuget/packages/",
         "outputPath": "/Users/marieburns/Development/c_practice/TodoApi/obj/",
         "projectStyle": "PackageReference",
