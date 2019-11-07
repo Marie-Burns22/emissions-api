@@ -4,9 +4,9 @@
         <name>TodoApi</name>
     </assembly>
     <members>
-        <member name="M:TodoApi.Controllers.TodoItemsController.PostTodoItem(TodoApi.Models.TodoItem)">
+        <member name="M:TodoApi.Controllers.EmissionsController.PostEmission(TodoApi.Models.Emission)">
              <summary>
-             Creates a TodoItem.
+             Creates a Emission.
              </summary>
             <remarks>
              Sample request:
@@ -19,13 +19,13 @@
                  }
             
              </remarks>
-             <returns>A newly created TodoItem</returns>
+             <returns>A newly created Emission</returns>
              <response code="201">Returns the newly created item</response>
              <response code="400">If the item is null</response>  
         </member>
-        <member name="M:TodoApi.Controllers.TodoItemsController.DeleteTodoItem(System.Int64)">
+        <member name="M:TodoApi.Controllers.EmissionsController.DeleteEmission(System.Int64)">
             <summary>
-            Deletes a specific TodoItem.
+            Deletes a specific Emission.
             </summary>
         </member>
     </members>

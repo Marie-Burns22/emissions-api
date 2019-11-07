@@ -1,4 +1,4 @@
-const uri = 'api/TodoItems';
+const uri = 'api/Emissions';
 let todos = [];
 
 function getItems() {

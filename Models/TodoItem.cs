@@ -3,12 +3,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TodoApi.Models
 {
-    public class TodoItem
+    public class Emission
     {
         public long Id { get; set; }
         
         [Required]
-        public string Name { get; set; }
+        public string Food { get; set; }
+
+        public float Amount { get; set;}
         [DefaultValue(false)]
         public bool IsComplete { get; set; }
     }

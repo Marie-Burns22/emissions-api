@@ -12,48 +12,48 @@ namespace TodoApi.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class TodoItemsController : ControllerBase
+    public class EmissionsController : ControllerBase
     {
         private readonly TodoContext _context;
 
-        public TodoItemsController(TodoContext context)
+        public EmissionsController(TodoContext context)
         {
             _context = context;
         }
 
-        // GET: api/TodoItems
+        // GET: api/Emissions
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodoItems()
+        public async Task<ActionResult<IEnumerable<Emission>>> GetEmissions()
         {
-            return await _context.TodoItems.ToListAsync();
+            return await _context.Emissions.ToListAsync();
         }
 
-        // GET: api/TodoItems/5
+        // GET: api/Emissions/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<TodoItem>> GetTodoItem(long id)
+        public async Task<ActionResult<Emission>> GetEmission(long id)
         {
-            var todoItem = await _context.TodoItems.FindAsync(id);
+            var Emission = await _context.Emissions.FindAsync(id);
 
-            if (todoItem == null)
+            if (Emission == null)
             {
                 return NotFound();
             }
 
-            return todoItem;
+            return Emission;
         }
 
-        // PUT: api/TodoItems/5
+        // PUT: api/Emissions/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutTodoItem(long id, TodoItem todoItem)
+        public async Task<IActionResult> PutEmission(long id, Emission Emission)
         {
-            if (id != todoItem.Id)
+            if (id != Emission.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(todoItem).State = EntityState.Modified;
+            _context.Entry(Emission).State = EntityState.Modified;
 
             try
             {
@@ -61,7 +61,7 @@ namespace TodoApi.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TodoItemExists(id))
+                if (!EmissionExists(id))
                 {
                     return NotFound();
                 }
@@ -74,11 +74,11 @@ namespace TodoApi.Controllers
             return NoContent();
         }
 
-        // POST: api/TodoItems
+        // POST: api/Emissions
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         /// <summary>
-        /// Creates a TodoItem.
+        /// Creates a Emission.
         /// </summary>
         ///<remarks>
         /// Sample request:
@@ -91,41 +91,41 @@ namespace TodoApi.Controllers
         ///     }
         ///
         /// </remarks>
-        /// <returns>A newly created TodoItem</returns>
+        /// <returns>A newly created Emission</returns>
         /// <response code="201">Returns the newly created item</response>
         /// <response code="400">If the item is null</response>  
         [HttpPost]
-        public async Task<ActionResult<TodoItem>> PostTodoItem(TodoItem todoItem)
+        public async Task<ActionResult<Emission>> PostEmission(Emission Emission)
         {
-            _context.TodoItems.Add(todoItem);
+            _context.Emissions.Add(Emission);
             await _context.SaveChangesAsync();
 
-            // return CreatedAtAction("GetTodoItem", new { id = todoItem.Id }, todoItem);
-            return CreatedAtAction(nameof(GetTodoItem), new { id = todoItem.Id }, todoItem);
+            // return CreatedAtAction("GetEmission", new { id = Emission.Id }, Emission);
+            return CreatedAtAction(nameof(GetEmission), new { id = Emission.Id }, Emission);
         }
 
-        // DELETE: api/TodoItems/5
+        // DELETE: api/Emissions/5
         /// <summary>
-        /// Deletes a specific TodoItem.
+        /// Deletes a specific Emission.
         /// </summary>
         [HttpDelete("{id}")]
-        public async Task<ActionResult<TodoItem>> DeleteTodoItem(long id)
+        public async Task<ActionResult<Emission>> DeleteEmission(long id)
         {
-            var todoItem = await _context.TodoItems.FindAsync(id);
-            if (todoItem == null)
+            var Emission = await _context.Emissions.FindAsync(id);
+            if (Emission == null)
             {
                 return NotFound();
             }
 
-            _context.TodoItems.Remove(todoItem);
+            _context.Emissions.Remove(Emission);
             await _context.SaveChangesAsync();
 
-            return todoItem;
+            return Emission;
         }
 
-        private bool TodoItemExists(long id)
+        private bool EmissionExists(long id)
         {
-            return _context.TodoItems.Any(e => e.Id == id);
+            return _context.Emissions.Any(e => e.Id == id);
         }
     }
 }
